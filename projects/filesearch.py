@@ -14,3 +14,21 @@
 # Start with a small folder to make it easy to check whether your program is
 # working correctly. Then search a bigger folder.
 # This program should work for any specified folder on your computer.
+
+import pathlib
+
+path = pathlib.Path(r"C:\Users\StephenFischer\OneDrive - SolidProfessor\Pictures")
+jpeg_files = []
+filetypes = []
+
+for file in path.glob('*/*/*'):
+    if file.suffix == ".jpg":
+        jpeg_files.append(file)
+    if file.suffix not in filetypes:
+        filetypes.append(file.suffix)
+
+for i in jpeg_files:
+    print(i)
+print(filetypes)
+
+
