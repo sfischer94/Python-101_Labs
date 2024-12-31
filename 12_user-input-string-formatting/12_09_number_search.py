@@ -2,7 +2,14 @@
 # Use a `while` loop to find the number. When the number is found,
 # exit the loop and print the number to the console.
 
-num = input("Type in a value between 0 and 1,000,000,000")
+import random
+answer = int(input("Type in a value between 0 and 1,000,000,000: "))
+guess = False
 
-while True:
-    if 
+while guess == True:
+    for i in range(1,100000001):
+        if i == answer:
+            guess == True
+            break
+
+print(answer)
